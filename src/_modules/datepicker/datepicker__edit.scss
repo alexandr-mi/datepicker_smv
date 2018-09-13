@@ -1,0 +1,129 @@
+.datepicker__edit {
+  display: none;
+  margin-top: 10px;
+  width: 320px;
+  height: 370px;
+  overflow: hidden;
+  padding: 20px 30px 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 35px 0 rgba(19, 192, 215, 0.35);
+
+  .datepicker__edit_container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .ui-state-disabled {
+    pointer-events: none;
+    color: #cac8ce;
+  }
+}
+
+.datepicker__edit_header {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 0.5px;
+  color: #322c48;
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+
+  &_title {
+
+  }
+}
+
+.datepicker__edit_close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('../images/icon/close.svg');
+  cursor: pointer;
+
+  &:hover {
+    background-image: url('../images/icon/close_hover.svg');
+  }
+}
+
+.datepicker__edit_month {
+  display: flex;
+  width: 66.6%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-right: 1px solid #f1f0f2;
+
+  &_item {
+    width: 50%;
+    &:nth-last-child(1), &:nth-last-child(2) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+
+.datepicker__edit_years_item, .datepicker__edit_month_item {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 0.5px;
+  color: #322c48;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: #13c0d7;
+  }
+
+  &.checked {
+
+    color: #13c0d7;
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/icon/checkmark.svg');
+      background-size: 100%;
+    }
+  }
+}
+
+.datepicker__edit_month_item {
+  &.checked {
+    &:after {
+      right: 20px;
+    }
+  }
+}
+
+
+.datepicker__edit_years {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+
+  &_item {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
